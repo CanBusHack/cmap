@@ -3,7 +3,7 @@ from lib.net_can_bus import NetworkCanBus
 
 can0 = NetworkCanBus()
 
-can0.scan_for_uds_ids(service_id=0x10, arb_id_scan_low=0x5FF, arb_id_scan_high=0x604)
+can0.scan_for_uds_ids(service_id=0x10, arb_id_scan_low=0x5FF, arb_id_scan_high=0x7FF)
 
 for pair in can0.nodes:
     tx_id, rx_id = pair[0]
