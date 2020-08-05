@@ -1,6 +1,6 @@
 import time
 
-from lib.subfunction_scan import scan_for_service_subfunction
+from old import scan_for_service_subfunction
 
 
 def scan_for_service_10(diagnostic_pair,

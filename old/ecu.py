@@ -1,4 +1,4 @@
-from lib.scan_for_services import scan_for_services
+from old import scan_for_services
 
 
 class Ecu:

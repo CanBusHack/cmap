@@ -1,8 +1,7 @@
-from treelib import Tree, Node
+from treelib import Tree
 
-from lib.find_diagnostic_ids import scan_for_ids
-from lib.scan_for_services import scan_for_services
-from lib.service_scan_ import *
+from old import scan_for_ids
+from old import scan_for_services
 
 
 def label_services_iso14229(sid):
@@ -77,49 +76,49 @@ def label_services_iso14230(sid):
     return "Unknown ISO 14229 Service."
 
 
-def label_service_10_subfunctions(subfunction):
-    if subfunction == 0x00:
+def label_service_10_subfunctions(sf):
+    if sf == 0x00:
         return "ISO SAE Reserved"
-    if subfunction == 0x01:
+    if sf == 0x01:
         return "Default Session"
-    if subfunction == 0x02:
+    if sf == 0x02:
         return "Programming Session"
-    if subfunction == 0x03:
+    if sf == 0x03:
         return "Extended Diagnostic Session"
-    if subfunction == 0x04:
+    if sf == 0x04:
         return "Safety System Diagnostic Session"
-    if 0x05 <= subfunction <= 0x3F:
+    if 0x05 <= sf <= 0x3F:
         return "ISO SAE Reserved"
-    if 0x40 <= subfunction <= 0x5F:
+    if 0x40 <= sf <= 0x5F:
         return "Vehicle Manufacturer Specific"
-    if 0x60 <= subfunction <= 0x7E:
+    if 0x60 <= sf <= 0x7E:
         return "System Supplier Specific"
-    if subfunction == 0x7F:
+    if sf == 0x7F:
         return "ISO SAE Reserved"
 
     return "Undefined Subfunction"
 
 
-def label_service_11_subfunctions(subfunction):
-    if subfunction == 0x00:
+def label_service_11_subfunctions(sf):
+    if sf == 0x00:
         return "ISO SAE Reserved"
-    if subfunction == 0x01:
+    if sf == 0x01:
         return "Hard Reset"
-    if subfunction == 0x02:
+    if sf == 0x02:
         return "Key Off/On Reset"
-    if subfunction == 0x03:
+    if sf == 0x03:
         return "Soft Reset"
-    if subfunction == 0x04:
+    if sf == 0x04:
         return "Enable Rapid Power Shutdown"
-    if subfunction == 0x05:
+    if sf == 0x05:
         return "Disable Rapid Power Shutdown"
-    if 0x06 <= subfunction <= 0x3F:
+    if 0x06 <= sf <= 0x3F:
         return "ISO SAE Reserved"
-    if 0x40 <= subfunction <= 0x5F:
+    if 0x40 <= sf <= 0x5F:
         return "Vehicle Manufacturer Specific"
-    if 0x60 <= subfunction <= 0x7E:
+    if 0x60 <= sf <= 0x7E:
         return "System Supplier Specific"
-    if subfunction == 0x7F:
+    if sf == 0x7F:
         return "ISO SAE Reserved"
 
     return "Undefined Subfunction"
