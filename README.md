@@ -7,7 +7,7 @@ Python Requirements:
 * python-can (https://python-can.readthedocs.io/en/master/installation.html)
 * can-isotp (https://pypi.org/project/can-isotp/)
 
-Practical Requirements
+Practical Requirements:
 * A hatred of vehicles
 * Love for fellow man-kind
 
