@@ -12,7 +12,7 @@ Practical Requirements:
 * Love for fellow man-kind
 
 Class Information:
-// net_can_bus.py::NetworkCanBus(socket_can_desciption, can_interface, bitrate, nodes)::scan_for_uds_ids(scan_service_id, anti_collision_buffer_time, message_length, message_subfunctions, arb_id_scan_low, arb_id_scan_high, scan_direction, try_twice, prompt_wait_timeout) --
+`// net_can_bus.py::NetworkCanBus(socket_can_desciption, can_interface, bitrate, nodes)::scan_for_uds_ids(scan_service_id, anti_collision_buffer_time, message_length, message_subfunctions, arb_id_scan_low, arb_id_scan_high, scan_direction, try_twice, prompt_wait_timeout) --`
 This bad boy can scan a CAN Bus real quick-like.  So fast that you might not know it happened.  (Ok a little bit exagerated.)  But it will return a list of Nodes "Pairs".  These "Pairs" are the [Request_ID, Response_ID] of the node.  So if you send a node a "Request_ID" it will Respond using the, that's right you guessed it, "Response ID".
 
 Ojbect Instantiation;
@@ -34,7 +34,7 @@ Ojbect Instantiation;
 
 
 Class Information:
-// uds_node.py::UDSNode(physical_request_id, response_id, functional_request_id, socket_can_interface, start_service_id, end_service_id, enhanced_mode_session_byte)::find_services(skip_response_only_service_ids, scan_only_known_uds_services, payload_extra_byte, add_extra_payload_byte)
+`// uds_node.py::UDSNode(physical_request_id, response_id, functional_request_id, socket_can_interface, start_service_id, end_service_id, enhanced_mode_session_byte)::find_services(skip_response_only_service_ids, scan_only_known_uds_services, payload_extra_byte, add_extra_payload_byte)`
 
 Object Instantiation;
 * "physical_request_id" is the Arbitration ID we'll use to send the data
@@ -53,7 +53,7 @@ Object Instantiation;
 
 
 Class Information:
-// services.py::Services(request_phyiscal_id, response_id, service_id, subfunction_length, padding_byte, protocol, socketcan_interface, can_scan_timeout, extra_data_field, extra_data_field_byte_string, scan_increment_step).find_service_subfunctions()
+`// services.py::Services(request_phyiscal_id, response_id, service_id, subfunction_length, padding_byte, protocol, socketcan_interface, can_scan_timeout, extra_data_field, extra_data_field_byte_string, scan_increment_step).find_service_subfunctions()`
 
 Objection Instantiation;
 * "request_phyiscal_id" yeah this is the same thing as UDSNode's phyiscal_request_id.  Just rearanged the order of the words to confuse you.
