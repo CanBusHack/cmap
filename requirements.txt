@@ -1,0 +1,4 @@
+can_isotp==1.6
+python_can==3.3.4
+inputimeout==1.0.4
+treelib==1.6.1
